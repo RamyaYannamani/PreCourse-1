@@ -5,29 +5,63 @@ class Stack {
   
     boolean isEmpty() 
     { 
-        //Write your code here 
+        return(top==-1)
     } 
 
     Stack() 
     { 
         //Initialize your constructor 
+        
+        top == -1;
     } 
   
     boolean push(int x) 
     { 
-        //Check for stack Overflow
-        //Write your code here
+        
+
+     //Checking for stack Overflow   if(top>=MAX-1)
+        {
+            System.out.println("stack overflow");
+            return false;
+            
+        }
+        else
+        {
+         //pushing the elements into the stack   a[++top] =x;
+            System.out.println("pushed into the stack");
+            return false;
+            
+        }
+          
     } 
   
     int pop() 
     { 
-        //If empty return 0 and print " Stack Underflow"
-        //Write your code here
+        
+        if(top<0)
+        {
+            return 0;
+             //If empty return 0 and print " Stack Underflow"
+             System.out.println("stack underflow");
+        }
+        else
+        {
+           return a[top--];
+        }
+       
+    
     } 
   
     int peek() 
     { 
-        //Write your code here
+        if(top<0)
+        {
+            System.out.println("there is no element in the stack");
+            return 0;
+        }
+        else{  
+           int x = a[top];
+            return x;
     } 
 } 
   
